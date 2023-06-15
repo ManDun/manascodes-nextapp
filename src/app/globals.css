@@ -2,26 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+
+@layer base {
+  body {
+    @apply text-[#1f2937] tracking-wide
   }
-}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold
+  }
+
+  h1 {
+    @apply text-4xl sm:text-5xl md:text-6xl
+  }
+
+  h2 {
+    @apply text-3xl sm:text-4xl
+  }
+
+  p {
+    @apply text-lg  md:text-xl
+  }
+  
+  li {
+    @apply cursor-pointer
+  }
+
+  button {
+    @apply drop-shadow-lg shadow-gray-400 rounded-md uppercase bg-gradient-to-r from-[#276778] to-[#4596a8] text-white
+  }
+
+  .nav-bg {
+    @apply bg-gradient-to-r from-[#d8e8ec] to-[#e6ebec] text-[#1f2937] tracking-wide
+  }
+
+  .main-bg {
+    @apply bg-gradient-to-b from-[#b6e3ec] to-slate-100 text-[#1f2937] tracking-wide
+  }
+
+  .about-bg {
+    @apply bg-slate-100 text-[#1f2937] tracking-wide
+  }
+
+  .skills-bg {
+    @apply bg-slate-100 text-[#1f2937] tracking-wide
+  }
+
+  .projects-bg {
+    @apply bg-slate-100 text-[#1f2937] tracking-wide
+  }
+
+  .contact-bg {
+    @apply bg-slate-100 text-[#1f2937] tracking-wide
+  }
 }
